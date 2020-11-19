@@ -51,13 +51,14 @@ public class PaymentController {
     }
     @GetMapping(value = "/payment/get/{id}")
     public CommonResult getPaymentById(@PathVariable("id") Long id){
-        Payment payment = paymentService.getPaymentById(id);
-        log.info("*****插入结果："+payment);
-        if(payment != null){
-            return new CommonResult(200,"查询成功,serverPort:"+serverPort,payment);
-        }else{
-            return new CommonResult(444,"没有对应记录,查询ID："+id,null);
-        }
+//        Payment payment = paymentService.getPaymentById(id);
+//        log.info("*****插入结果："+payment);
+//        if(payment != null){
+        CommonResult m = new CommonResult(200,"查询成功,serverPort:"+serverPort,null);
+            return m;
+//        }else{
+//            return new CommonResult(444,"没有对应记录,查询ID："+id,null);
+//        }
     }
     @GetMapping(value = "/payment/feign/timeout")
     public String paymentFeignTimeout(){
@@ -69,5 +70,6 @@ public class PaymentController {
             }
         return serverPort;
     }
+
 
 }
