@@ -1,15 +1,7 @@
 server:
   port: 8001
 
-spring:
-  application:
-    name: cloud-provider-service
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource      #当前数据源操作类型
-    driver-class-name: oracle.jdbc.OracleDriver
-    url: jdbc:oracle:thin:@10.2.0.170:1521:ora11g
-    username: tnmsponsh
-    password: zznode
+
 eureka:
   client:
     #表示是否将自己注册进EurekaServer默认为true
@@ -23,6 +15,3 @@ eureka:
     instance-id: payment8001
     prefer-ip-address: true
 
-mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.atguigu.springcloud.entities       #所有Entity别名类所在包
