@@ -1,4 +1,4 @@
-package com.atguigu.springcloud;
+package com.atguigu;
 
 import com.atguigu.myrule.MySelfRule;
 import org.springframework.boot.SpringApplication;
